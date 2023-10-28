@@ -1,6 +1,6 @@
 vector<int> superiorElements(vector<int>&a) {
     // Write your code here.
-    queue<int>q1;
+    /*queue<int>q1;
     queue<int>q2;
     set<int>v;
     int n=a.size();
@@ -28,6 +28,18 @@ vector<int> superiorElements(vector<int>&a) {
     for(i:v){
         result.push_back(i);
     }
-    return result;
+    return result;*/
+
+    int n=a.size();
+    vector<int>ans;
+    int maxi=INT_MIN;
+    for(int i=n-1;i>=0;i--){
+        if(maxi<a[i])
+        {
+            maxi=a[i];
+            ans.push_back(a[i]);
+        }
+    }
+    return ans;
     
 }
